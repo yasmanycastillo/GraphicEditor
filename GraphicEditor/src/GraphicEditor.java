@@ -1,3 +1,4 @@
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.JFrame;
@@ -13,12 +14,12 @@ public class GraphicEditor extends JFrame {
         this.setLayout(new BorderLayout());
         add(new Canvas(), BorderLayout.CENTER);
     }
-    
+
     public static void main(String[] args) {
         GraphicEditor window = new GraphicEditor();
         window.setTitle("Paint app");
         window.setSize(900, 400);
-        window.setLocationRelativeTo(null);        
+        window.setLocationRelativeTo(null);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setVisible(true);
     }

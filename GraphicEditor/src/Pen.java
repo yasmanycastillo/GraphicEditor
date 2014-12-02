@@ -3,12 +3,12 @@ import java.awt.Graphics2D;
 
 /**
  *
- * @author 
+ * @author
  */
-public class Pen extends PaintingTool{
+public class Pen extends PaintingTool {
 
     @Override
-    public void Paint(int oldX, int oldY, int x, int y, Graphics2D g) {
-     g.drawLine(oldX, oldY, x, y);
+    public void Paint(int oldX, int oldY, int xCoord, int yCoord, Graphics2D g) {
+        g.drawLine(oldX, oldY, xCoord, yCoord);
     }
 }

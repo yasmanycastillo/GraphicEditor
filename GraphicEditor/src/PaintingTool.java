@@ -2,7 +2,7 @@
 import java.awt.Graphics2D;
 
 /**
- * @author 
+ * @author
  */
 public abstract class PaintingTool {
 
@@ -16,9 +16,9 @@ public abstract class PaintingTool {
         this.stroke = stroke;
     }
 
-    public abstract void Paint(int oldX, int oldY, int x, int y, Graphics2D g);
-    
-    public void setStrokeSize(int size){
+    public abstract void Paint(int oldXCoord, int oldYCoord, int xCoord, int yCoord, Graphics2D g);
+
+    public void setStrokeSize(int size) {
         stroke = size;
     }
 }

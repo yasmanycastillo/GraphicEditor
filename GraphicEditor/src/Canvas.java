@@ -1,5 +1,4 @@
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.MouseEvent;
@@ -14,7 +13,7 @@ import javax.swing.JPanel;
  */
 public class Canvas extends JPanel implements MouseListener, MouseMotionListener {
 
-    int xCoord, yCoord, oldX, oldY;
+    int xCoord, yCoord, oldXCoord, oldYCoord;
     int StrokeSize = 10;
     PaintingTool[] tools = new PaintingTool[2];
 
@@ -26,41 +25,46 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
     }
 
     @Override
-    public void paintComponent(Graphics g) {}
-
-    @Override
-	public void mouseDragged(MouseEvent e) {
-      drawPoint(e.getX(), e.getY());
+    public void paintComponent(Graphics g) {
     }
 
     @Override
-	public void mouseMoved(MouseEvent e) {}
+    public void mouseDragged(MouseEvent e) {
+        drawPoint(e.getX(), e.getY());
+    }
 
     @Override
-    public void mouseClicked(MouseEvent e) {}
+    public void mouseMoved(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+    }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        oldX = e.getX();
-        oldY = e.getY();
-        //drawPoint(e.getX(), e.getY());
+        oldXCoord = e.getX();
+        oldYCoord = e.getY();
     }
 
     @Override
-    public void mouseReleased(MouseEvent e) {}
+    public void mouseReleased(MouseEvent e) {
+    }
 
     @Override
-    public void mouseEntered(MouseEvent e) {}
+    public void mouseEntered(MouseEvent e) {
+    }
 
     @Override
-    public void mouseExited(MouseEvent e) {}
+    public void mouseExited(MouseEvent e) {
+    }
 
     public void drawPoint(int x, int y) {
         xCoord = x;
         yCoord = y;
         Graphics2D g = (Graphics2D) getGraphics();
-        tools[0].Paint(oldX, oldY, xCoord, yCoord, g);
-        oldX = xCoord;
-        oldY = yCoord;
+        tools[0].Paint(oldXCoord, oldYCoord, xCoord, yCoord, g);
+        oldXCoord = xCoord;
+        oldYCoord = yCoord;
     }
 }
