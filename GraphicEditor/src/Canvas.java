@@ -21,7 +21,6 @@ public class Canvas extends JPanel implements MouseListener, MouseMotionListener
         addMouseMotionListener(this);
         addMouseListener(this);
         tools[0] = new Pen();
-        tools[1] = new Eraser();
     }
 
     @Override
